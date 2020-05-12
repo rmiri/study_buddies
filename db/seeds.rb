@@ -11,7 +11,7 @@ Location.destroy_all
 Subject.destroy_all 
 
 User.create(name:"Mariola", email:"paskomariola@gmail.com", password:"p1")
-User.create(name:"Renata", email:rails s, password:"p1")
+User.create(name:"Renata", email:"renata@gmail.com", password:"p1")
 User.create(name:"Gabi", email:"gabi@gmail.com", password:"p1")
 User.create(name:"Anna", email:"anna@gmail.com", password:"p1")
 User.create(name:"Sofia", email:"sofia@gmail.com", password:"p1")
