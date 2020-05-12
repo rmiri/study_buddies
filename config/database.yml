@@ -21,5 +21,7 @@ test:
   database: study_buddies_development
 
 production:
-  <<: *default
-  database: study_buddies_development
+  url: <%= ENV['DATABASE_URL'] %>
+
+  # <<: *default
+  # database: study_buddies_development
