@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_20_180025) do
+ActiveRecord::Schema.define(version: 2020_05_12_205518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,18 +42,6 @@ ActiveRecord::Schema.define(version: 2020_01_20_180025) do
     t.index ["study_group_id"], name: "index_participants_on_study_group_id"
     t.index ["user_id", "study_group_id"], name: "index_participants_on_user_id_and_study_group_id", unique: true
     t.index ["user_id"], name: "index_participants_on_user_id"
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "study_group_id", null: false
-    t.string "title"
-    t.text "description"
-    t.integer "rating"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["study_group_id"], name: "index_reviews_on_study_group_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "study_groups", force: :cascade do |t|
@@ -91,8 +79,6 @@ ActiveRecord::Schema.define(version: 2020_01_20_180025) do
   add_foreign_key "comments", "users"
   add_foreign_key "participants", "study_groups"
   add_foreign_key "participants", "users"
-  add_foreign_key "reviews", "study_groups"
-  add_foreign_key "reviews", "users"
   add_foreign_key "study_groups", "locations"
   add_foreign_key "study_groups", "subjects"
   add_foreign_key "study_groups", "users"
