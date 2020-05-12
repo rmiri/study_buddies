@@ -4,7 +4,7 @@ class StudyGroup < ApplicationRecord
   belongs_to :subject
   has_many :reviews, dependent: :destroy
   has_many :comments, dependent: :destroy
-  has_many :participants, dependent: :destroy
+  has_many :participants
   has_many :users, through: :participants
   # validates :num_participants, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 10 }
 
