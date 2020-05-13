@@ -4,7 +4,7 @@ class User < ApplicationRecord
     has_many :participants, dependent: :destroy 
     has_many :study_groups, dependent: :destroy 
     has_many :study_groups, through: :participants
-    has_secure_password 
+    # has_secure_password 
 
     validates :name, presence: true
     validates :email, :uniqueness => true, on: :create
