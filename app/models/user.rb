@@ -1,4 +1,6 @@
+require 'bcrypt'
 class User < ApplicationRecord
+    include BCrypt
     has_many :participants, dependent: :destroy 
     has_many :study_groups, dependent: :destroy 
     has_many :study_groups, through: :participants
