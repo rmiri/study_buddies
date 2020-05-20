@@ -22,6 +22,7 @@ class UsersController < ApplicationController
 
     def create
         @user = User.create(user_params)
+        # debugger
         if @user.valid?
             session[:user_id] = @user.id
             redirect_to study_groups_path 
@@ -57,6 +58,7 @@ class UsersController < ApplicationController
     private 
 
     def user_params 
+        # debugger
         params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end 
     
