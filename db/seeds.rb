@@ -28,8 +28,8 @@ User.create(name:"Marcus", email:"marcus2@gmail.com", password:"p1")
 User.create(name:"Carlo", email:"carlo2@gmail.com", password:"p1")
 User.create(name:"John", email:"john2@gmail.com", password:"p1")
 
-
 Location.create(name:"Borg", address:"Flatiron, Finsbury Square", city:"London", capacity: 30)
+
 Location.create(name:"Turing", address:"Flatiron, Finsbury Square", city:"London", capacity: 20)
 Location.create(name:"Lovelace", address:"Flatiron, Finsbury Square", city:"London", capacity: 5)
 Location.create(name:"Barness-Lee", address:"Flatiron, Finsbury Square", city:"London", capacity: 12)
